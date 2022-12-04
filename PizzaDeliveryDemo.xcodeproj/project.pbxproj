@@ -132,9 +132,9 @@
 			children = (
 				E049B763293C92B200053F61 /* PizzaDeliveryExtension.entitlements */,
 				E049B717293C925700053F61 /* PizzaDeliveryDemo */,
+				E049B752293C928200053F61 /* PizzaDelivery */,
 				E049B72E293C925800053F61 /* PizzaDeliveryDemoTests */,
 				E049B738293C925800053F61 /* PizzaDeliveryDemoUITests */,
-				E049B752293C928200053F61 /* PizzaDelivery */,
 				E049B74D293C928200053F61 /* Frameworks */,
 				E049B716293C925700053F61 /* Products */,
 			);

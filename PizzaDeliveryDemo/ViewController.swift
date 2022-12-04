@@ -8,10 +8,10 @@
 import UIKit
 import ActivityKit
 
+let minutes = 12
+var deliveryActivity: Activity<PizzaDeliveryAttributes>? = nil
+
 class ViewController: UIViewController {
-    
-    let minutes = 12
-    var deliveryActivity: Activity<PizzaDeliveryAttributes>? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,9 @@ class ViewController: UIViewController {
             let initialContentState = PizzaDeliveryAttributes.ContentState(driverName: "Layer", deliveryTimer:date)
             let activityAttributes = PizzaDeliveryAttributes(numberOfPizzas: 3, totalAmount: "$66.66", orderNumber: "12345")
             do {
-                deliveryActivity = try Activity.request(attributes: activityAttributes, contentState: initialContentState)
+                deliveryActivity = try Activity.request(attributes: activityAttributes, contentState: initialContentState, pushType: .token)
                 print("Requested a pizza delivery Live Activity \(String(describing: deliveryActivity?.id ?? "nil")).")
+                print("Activity PushToken: \(String(describing: deliveryActivity?.pushToken))");
             } catch (let error) {
                 print("Error requesting pizza delivery Live Activity \(error.localizedDescription).")
             }
@@ -51,11 +52,36 @@ class ViewController: UIViewController {
             let finalDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: "Anne Johnson", deliveryTimer: Date.now...Date())
             Task {
                 try? await Task.sleep(nanoseconds: 5_000_000_000)
-                await deliveryActivity?.end(using:finalDeliveryStatus, dismissalPolicy: .default)
+                await deliveryActivity?.end(using:finalDeliveryStatus, dismissalPolicy: .immediate)
+            }
+        }
+    }
+    
+}
+
+// 解析灵动岛的传递数据，做相应的业务逻辑
+struct ActivityBrigde {
+    
+    public static func activityAction(url: URL){
+        //TODO: update live activity
+        
+    }
+    
+    public static func disposeNotifiMessage(userInfo: [AnyHashable: Any]) {
+        if let aps = userInfo["aps"] as? [String: Any] {
+            if let content = aps["content-state"] as? [String: Any] {
+                if let diriverName = content["driverName"] as? String {
+                    let future = Calendar.current.date(byAdding: .minute, value: (Int(minutes / 2)), to: Date())!
+                    let date = Date.now...future
+                    let updatedDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: diriverName,  deliveryTimer: date)
+                    let alertConfiguration = AlertConfiguration(title: "Delivery Update", body: "Your pizza order will immediate delivery.", sound: .default)
+                    Task {
+                        await deliveryActivity?.update(using: updatedDeliveryStatus, alertConfiguration: alertConfiguration)
+                    }
+                }
             }
         }
     }
     
     
 }
-

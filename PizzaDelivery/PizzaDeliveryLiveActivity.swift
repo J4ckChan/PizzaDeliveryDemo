@@ -36,7 +36,7 @@ struct PizzaDeliveryLiveActivity: Widget {
                             .foregroundColor(.indigo)
                     }
                     .font(.title3)
-
+                    
                 }
                 DynamicIslandExpandedRegion(.center) {
                     Text("\(context.state.driverName) is on their way!")
@@ -47,7 +47,7 @@ struct PizzaDeliveryLiveActivity: Widget {
                     Button {
                         //TODO: Deep link into your app.
                         // eg. twitter://post?message=using%20deeplinking
-                        print("Button .bottom")
+                        
                     } label: {
                         Label("Call driver", systemImage: "phone")
                     }
