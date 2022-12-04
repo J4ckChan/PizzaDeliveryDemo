@@ -16,6 +16,16 @@
 		E049B730293C925800053F61 /* PizzaDeliveryDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E049B72F293C925800053F61 /* PizzaDeliveryDemoTests.swift */; };
 		E049B73A293C925800053F61 /* PizzaDeliveryDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E049B739293C925800053F61 /* PizzaDeliveryDemoUITests.swift */; };
 		E049B73C293C925800053F61 /* PizzaDeliveryDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E049B73B293C925800053F61 /* PizzaDeliveryDemoUITestsLaunchTests.swift */; };
+		E049B74F293C928200053F61 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E049B74E293C928200053F61 /* WidgetKit.framework */; };
+		E049B751293C928200053F61 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E049B750293C928200053F61 /* SwiftUI.framework */; };
+		E049B754293C928200053F61 /* PizzaDeliveryBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E049B753293C928200053F61 /* PizzaDeliveryBundle.swift */; };
+		E049B756293C928200053F61 /* PizzaDeliveryLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E049B755293C928200053F61 /* PizzaDeliveryLiveActivity.swift */; };
+		E049B758293C928200053F61 /* PizzaDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E049B757293C928200053F61 /* PizzaDelivery.swift */; };
+		E049B75A293C928200053F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E049B759293C928200053F61 /* Assets.xcassets */; };
+		E049B75E293C928200053F61 /* PizzaDeliveryExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E049B74C293C928200053F61 /* PizzaDeliveryExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E049B766293C935200053F61 /* PizzaDeliveryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E049B765293C935200053F61 /* PizzaDeliveryAttributes.swift */; };
+		E049B767293C94BD00053F61 /* PizzaDeliveryLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E049B755293C928200053F61 /* PizzaDeliveryLiveActivity.swift */; };
+		E049B768293C953200053F61 /* PizzaDeliveryAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E049B765293C935200053F61 /* PizzaDeliveryAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +43,28 @@
 			remoteGlobalIDString = E049B714293C925700053F61;
 			remoteInfo = PizzaDeliveryDemo;
 		};
+		E049B75C293C928200053F61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E049B70D293C925700053F61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E049B74B293C928200053F61;
+			remoteInfo = PizzaDeliveryExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E049B762293C928300053F61 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E049B75E293C928200053F61 /* PizzaDeliveryExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E049B715293C925700053F61 /* PizzaDeliveryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaDeliveryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +80,17 @@
 		E049B735293C925800053F61 /* PizzaDeliveryDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzaDeliveryDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E049B739293C925800053F61 /* PizzaDeliveryDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDeliveryDemoUITests.swift; sourceTree = "<group>"; };
 		E049B73B293C925800053F61 /* PizzaDeliveryDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDeliveryDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E049B74C293C928200053F61 /* PizzaDeliveryExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PizzaDeliveryExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E049B74E293C928200053F61 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E049B750293C928200053F61 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E049B753293C928200053F61 /* PizzaDeliveryBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDeliveryBundle.swift; sourceTree = "<group>"; };
+		E049B755293C928200053F61 /* PizzaDeliveryLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDeliveryLiveActivity.swift; sourceTree = "<group>"; };
+		E049B757293C928200053F61 /* PizzaDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDelivery.swift; sourceTree = "<group>"; };
+		E049B759293C928200053F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E049B75B293C928200053F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E049B763293C92B200053F61 /* PizzaDeliveryExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PizzaDeliveryExtension.entitlements; sourceTree = "<group>"; };
+		E049B764293C92EF00053F61 /* PizzaDeliveryDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PizzaDeliveryDemo.entitlements; sourceTree = "<group>"; };
+		E049B765293C935200053F61 /* PizzaDeliveryAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaDeliveryAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,15 +115,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E049B749293C928200053F61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E049B751293C928200053F61 /* SwiftUI.framework in Frameworks */,
+				E049B74F293C928200053F61 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		E049B70C293C925700053F61 = {
 			isa = PBXGroup;
 			children = (
+				E049B763293C92B200053F61 /* PizzaDeliveryExtension.entitlements */,
 				E049B717293C925700053F61 /* PizzaDeliveryDemo */,
 				E049B72E293C925800053F61 /* PizzaDeliveryDemoTests */,
 				E049B738293C925800053F61 /* PizzaDeliveryDemoUITests */,
+				E049B752293C928200053F61 /* PizzaDelivery */,
+				E049B74D293C928200053F61 /* Frameworks */,
 				E049B716293C925700053F61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +146,7 @@
 				E049B715293C925700053F61 /* PizzaDeliveryDemo.app */,
 				E049B72B293C925800053F61 /* PizzaDeliveryDemoTests.xctest */,
 				E049B735293C925800053F61 /* PizzaDeliveryDemoUITests.xctest */,
+				E049B74C293C928200053F61 /* PizzaDeliveryExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +154,7 @@
 		E049B717293C925700053F61 /* PizzaDeliveryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E049B764293C92EF00053F61 /* PizzaDeliveryDemo.entitlements */,
 				E049B718293C925700053F61 /* AppDelegate.swift */,
 				E049B71A293C925700053F61 /* SceneDelegate.swift */,
 				E049B71C293C925700053F61 /* ViewController.swift */,
@@ -127,6 +183,28 @@
 			path = PizzaDeliveryDemoUITests;
 			sourceTree = "<group>";
 		};
+		E049B74D293C928200053F61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E049B74E293C928200053F61 /* WidgetKit.framework */,
+				E049B750293C928200053F61 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E049B752293C928200053F61 /* PizzaDelivery */ = {
+			isa = PBXGroup;
+			children = (
+				E049B753293C928200053F61 /* PizzaDeliveryBundle.swift */,
+				E049B755293C928200053F61 /* PizzaDeliveryLiveActivity.swift */,
+				E049B765293C935200053F61 /* PizzaDeliveryAttributes.swift */,
+				E049B757293C928200053F61 /* PizzaDelivery.swift */,
+				E049B759293C928200053F61 /* Assets.xcassets */,
+				E049B75B293C928200053F61 /* Info.plist */,
+			);
+			path = PizzaDelivery;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +215,12 @@
 				E049B711293C925700053F61 /* Sources */,
 				E049B712293C925700053F61 /* Frameworks */,
 				E049B713293C925700053F61 /* Resources */,
+				E049B762293C928300053F61 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E049B75D293C928200053F61 /* PBXTargetDependency */,
 			);
 			name = PizzaDeliveryDemo;
 			productName = PizzaDeliveryDemo;
@@ -183,6 +263,23 @@
 			productReference = E049B735293C925800053F61 /* PizzaDeliveryDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E049B74B293C928200053F61 /* PizzaDeliveryExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E049B75F293C928300053F61 /* Build configuration list for PBXNativeTarget "PizzaDeliveryExtension" */;
+			buildPhases = (
+				E049B748293C928200053F61 /* Sources */,
+				E049B749293C928200053F61 /* Frameworks */,
+				E049B74A293C928200053F61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PizzaDeliveryExtension;
+			productName = PizzaDeliveryExtension;
+			productReference = E049B74C293C928200053F61 /* PizzaDeliveryExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +301,9 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = E049B714293C925700053F61;
 					};
+					E049B74B293C928200053F61 = {
+						CreatedOnToolsVersion = 14.1;
+					};
 				};
 			};
 			buildConfigurationList = E049B710293C925700053F61 /* Build configuration list for PBXProject "PizzaDeliveryDemo" */;
@@ -222,6 +322,7 @@
 				E049B714293C925700053F61 /* PizzaDeliveryDemo */,
 				E049B72A293C925800053F61 /* PizzaDeliveryDemoTests */,
 				E049B734293C925800053F61 /* PizzaDeliveryDemoUITests */,
+				E049B74B293C928200053F61 /* PizzaDeliveryExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +352,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E049B74A293C928200053F61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E049B75A293C928200053F61 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,7 +368,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E049B71D293C925700053F61 /* ViewController.swift in Sources */,
+				E049B766293C935200053F61 /* PizzaDeliveryAttributes.swift in Sources */,
 				E049B719293C925700053F61 /* AppDelegate.swift in Sources */,
+				E049B767293C94BD00053F61 /* PizzaDeliveryLiveActivity.swift in Sources */,
 				E049B71B293C925700053F61 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +392,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E049B748293C928200053F61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E049B754293C928200053F61 /* PizzaDeliveryBundle.swift in Sources */,
+				E049B768293C953200053F61 /* PizzaDeliveryAttributes.swift in Sources */,
+				E049B756293C928200053F61 /* PizzaDeliveryLiveActivity.swift in Sources */,
+				E049B758293C928200053F61 /* PizzaDelivery.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +415,11 @@
 			isa = PBXTargetDependency;
 			target = E049B714293C925700053F61 /* PizzaDeliveryDemo */;
 			targetProxy = E049B736293C925800053F61 /* PBXContainerItemProxy */;
+		};
+		E049B75D293C928200053F61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E049B74B293C928200053F61 /* PizzaDeliveryExtension */;
+			targetProxy = E049B75C293C928200053F61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -433,13 +560,16 @@
 		E049B740293C925800053F61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PizzaDeliveryDemo/PizzaDeliveryDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 678MZVH5SX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PizzaDeliveryDemo/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -461,13 +591,16 @@
 		E049B741293C925800053F61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PizzaDeliveryDemo/PizzaDeliveryDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 678MZVH5SX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PizzaDeliveryDemo/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -562,6 +695,64 @@
 			};
 			name = Release;
 		};
+		E049B760293C928300053F61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PizzaDeliveryExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 678MZVH5SX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PizzaDelivery/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PizzaDelivery;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.PizzaDeliveryDemo.PizzaDelivery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E049B761293C928300053F61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PizzaDeliveryExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 678MZVH5SX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PizzaDelivery/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PizzaDelivery;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.PizzaDeliveryDemo.PizzaDelivery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -597,6 +788,15 @@
 			buildConfigurations = (
 				E049B746293C925800053F61 /* Debug */,
 				E049B747293C925800053F61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E049B75F293C928300053F61 /* Build configuration list for PBXNativeTarget "PizzaDeliveryExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E049B760293C928300053F61 /* Debug */,
+				E049B761293C928300053F61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
