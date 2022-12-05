@@ -52,7 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     
     // 通知step3 用户同意通知权限后，获取得到的deviceToken
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        debugPrint("通知step3 用户同意通知权限后，获取得到的deviceToken：\(String(data: deviceToken, encoding: .utf8) ?? "")")
+        print("通知step3 用户同意通知权限后，获取得到的deviceToken: \(String(describing: deviceToken))")
+        let myToken = deviceToken.map({String(format: "%02x", $0)}).joined()
+        print("通知step3 用户同意通知权限后，获取得到的deviceToken: \(String(describing: myToken))");
+        
     }
     
     // 通知step3 获取deviceToken失败
