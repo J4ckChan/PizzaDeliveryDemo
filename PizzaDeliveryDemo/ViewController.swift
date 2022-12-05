@@ -28,9 +28,8 @@ class ViewController: UIViewController {
     
     @IBAction func onOrderPizza(_ sender: UIButton) {
         if #available(iOS 16.1, *) {
-            let future = Calendar.current.date(byAdding: .minute, value: (minutes), to: Date())!
-            let date = Date.now...future
-            let initialContentState = PizzaDeliveryAttributes.ContentState(driverName: "Cat", deliveryTimer:date)
+            let date = Date(timeIntervalSinceNow: TimeInterval(minutes * 60)).timeIntervalSince1970
+            let initialContentState = PizzaDeliveryAttributes.ContentState(driverName: "Cat", deliveryTimer:Int(date))
             let activityAttributes = PizzaDeliveryAttributes(numberOfPizzas: 3, totalAmount: "$66.66", orderNumber: "12345")
             do {
                 deliveryActivity = try Activity.request(attributes: activityAttributes, contentState: initialContentState, pushType: .token)
@@ -53,9 +52,8 @@ class ViewController: UIViewController {
     
     @IBAction func onUpdate(_ sender: UIButton) {
         if #available(iOS 16.1, *) {
-            let future = Calendar.current.date(byAdding: .minute, value: (Int(minutes / 2)), to: Date())!
-            let date = Date.now...future
-            let updatedDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: "Dog", deliveryTimer: date)
+            let date = Date(timeIntervalSinceNow: TimeInterval(minutes * 30)).timeIntervalSince1970
+            let updatedDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: "Dog", deliveryTimer: Int(date))
             let alertConfiguration = AlertConfiguration(title: "Delivery Update", body: "Your pizza order will immediate delivery.", sound: .default)
             Task {
 //                try? await Task.sleep(nanoseconds: 5_000_000_000)
@@ -66,7 +64,7 @@ class ViewController: UIViewController {
     
     @IBAction func onDontWantIt(_ sender: UIButton) {
         if #available(iOS 16.1, *) {
-            let finalDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: "Anne Johnson", deliveryTimer: Date.now...Date())
+            let finalDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: "Anne Johnson", deliveryTimer: Int(Date.now.timeIntervalSince1970))
             Task {
                 //                try? await Task.sleep(nanoseconds: 5_000_000_000)
                 await deliveryActivity?.end(using:finalDeliveryStatus, dismissalPolicy: .immediate)
@@ -88,9 +86,8 @@ struct ActivityBrigde {
         if let aps = userInfo["aps"] as? [String: Any] {
             if let content = aps["content-state"] as? [String: Any] {
                 if let diriverName = content["driverName"] as? String {
-                    let future = Calendar.current.date(byAdding: .minute, value: (Int(minutes / 2)), to: Date())!
-                    let date = Date.now...future
-                    let updatedDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: diriverName,  deliveryTimer: date)
+                    let date = Date(timeIntervalSinceNow: TimeInterval(minutes * 30)).timeIntervalSince1970
+                    let updatedDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: diriverName,  deliveryTimer: Int(date))
                     let alertConfiguration = AlertConfiguration(title: "Delivery Update", body: "Your pizza order will immediate delivery.", sound: .default)
                     Task {
                         await deliveryActivity?.update(using: updatedDeliveryStatus, alertConfiguration: alertConfiguration)

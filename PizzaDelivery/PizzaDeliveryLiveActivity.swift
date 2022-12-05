@@ -27,7 +27,7 @@ struct PizzaDeliveryLiveActivity: Widget {
                 }
                 DynamicIslandExpandedRegion(.trailing) {
                     Label {
-                        Text(timerInterval: context.state.deliveryTimer, countsDown: true)
+                        Text(timerInterval: Date.now...Date(timeIntervalSince1970: TimeInterval(context.state.deliveryTimer)), countsDown: true)
                             .multilineTextAlignment(.trailing)
                             .frame(width: 50)
                             .monospacedDigit()
@@ -63,14 +63,14 @@ struct PizzaDeliveryLiveActivity: Widget {
                 }
                 .font(.caption2)
             } compactTrailing: {
-                Text(timerInterval: context.state.deliveryTimer, countsDown: true)
+                Text(timerInterval: Date.now...Date(timeIntervalSince1970: TimeInterval(context.state.deliveryTimer)), countsDown: true)
                     .multilineTextAlignment(.center)
                     .frame(width: 40)
                     .font(.caption2)
             } minimal: {
                 VStack(alignment: .center) {
                     Image(systemName: "timer")
-                    Text(timerInterval: context.state.deliveryTimer, countsDown: true)
+                    Text(timerInterval: Date.now...Date(timeIntervalSince1970: TimeInterval(context.state.deliveryTimer)), countsDown: true)
                         .multilineTextAlignment(.center)
                         .monospacedDigit()
                         .font(.caption2)
@@ -102,7 +102,7 @@ struct LockScreenLiveActivityView: View {
                 .font(.title2)
                 Spacer()
                 Label {
-                    Text(timerInterval: context.state.deliveryTimer, countsDown: true)
+                    Text(timerInterval: Date.now...Date(timeIntervalSince1970: TimeInterval(context.state.deliveryTimer)), countsDown: true)
                         .multilineTextAlignment(.center)
                         .frame(width: 50)
                         .monospacedDigit()
