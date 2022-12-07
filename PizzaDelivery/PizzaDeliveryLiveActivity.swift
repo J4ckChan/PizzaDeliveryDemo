@@ -21,7 +21,7 @@ struct PizzaDeliveryLiveActivity: Widget {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Label("\(context.attributes.numberOfPizzas) Pizzas", systemImage: "bag")
+                    Label("\(context.attributes.numberOfPizzas) Pizzas🍕", systemImage: "bag")
                         .foregroundColor(.indigo)
                         .font(.title3)
                 }
@@ -56,7 +56,7 @@ struct PizzaDeliveryLiveActivity: Widget {
                 }
             } compactLeading: {
                 Label {
-                    Text("\(context.attributes.numberOfPizzas) Pizzas")
+                    Text("\(context.attributes.numberOfPizzas) Pizzas🍕")
                 } icon: {
                     Image(systemName: "bag")
                         .foregroundColor(.indigo)
@@ -89,12 +89,12 @@ struct LockScreenLiveActivityView: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("\(context.state.driverName) is on their way with your pizza!")
+            Text("\(context.state.driverName) is on their way with your pizza🍕!")
             Spacer()
             HStack {
                 Spacer()
                 Label {
-                    Text("\(context.attributes.numberOfPizzas) Pizzas")
+                    Text("\(context.attributes.numberOfPizzas) Pizzas🍕")
                 } icon: {
                     Image(systemName: "bag")
                         .foregroundColor(.indigo)

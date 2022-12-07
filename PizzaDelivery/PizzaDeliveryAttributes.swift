@@ -18,7 +18,7 @@ struct PizzaDeliveryAttributes: ActivityAttributes {
     }
     
     // Fixed non-changing properties about your activity go here!
-    var numberOfPizzas: Int
-    var totalAmount: String
-    var orderNumber: String
+    let numberOfPizzas: Int
+    let totalAmount: String
+    let orderNumber: String
 }

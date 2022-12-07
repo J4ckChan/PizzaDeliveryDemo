@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBAction func onOrderPizza(_ sender: UIButton) {
         if #available(iOS 16.1, *) {
             let date = Date(timeIntervalSinceNow: TimeInterval(minutes * 60)).timeIntervalSince1970
-            let initialContentState = PizzaDeliveryAttributes.ContentState(driverName: "Cat", deliveryTimer:Int(date))
+            let initialContentState = PizzaDeliveryAttributes.ContentState(driverName: "🐱", deliveryTimer:Int(date))
             let activityAttributes = PizzaDeliveryAttributes(numberOfPizzas: 3, totalAmount: "$66.66", orderNumber: "12345")
             do {
                 deliveryActivity = try Activity.request(attributes: activityAttributes, contentState: initialContentState, pushType: .token)
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     @IBAction func onUpdate(_ sender: UIButton) {
         if #available(iOS 16.1, *) {
             let date = Date(timeIntervalSinceNow: TimeInterval(minutes * 30)).timeIntervalSince1970
-            let updatedDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: "Dog", deliveryTimer: Int(date))
+            let updatedDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: "🐶", deliveryTimer: Int(date))
             let alertConfiguration = AlertConfiguration(title: "Delivery Update", body: "Your pizza order will immediate delivery.", sound: .default)
             Task {
 //                try? await Task.sleep(nanoseconds: 5_000_000_000)
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
     
     @IBAction func onDontWantIt(_ sender: UIButton) {
         if #available(iOS 16.1, *) {
-            let finalDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: "Anne Johnson", deliveryTimer: Int(Date.now.timeIntervalSince1970))
+            let finalDeliveryStatus = PizzaDeliveryAttributes.PizzaDeliveryStatus(driverName: "🤖️", deliveryTimer: Int(Date.now.timeIntervalSince1970))
             Task {
                 //                try? await Task.sleep(nanoseconds: 5_000_000_000)
                 await deliveryActivity?.end(using:finalDeliveryStatus, dismissalPolicy: .immediate)
